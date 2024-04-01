@@ -1,0 +1,31 @@
+﻿<Page x:Class="DatasetEditTrue.WeaponsTypePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DatasetEditTrue"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="WeaponsTypePage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="WeaponsTypeGrid" d:ItemsSource="{d:SampleData ItemCount=5}" IsReadOnly="True" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Width="800" SelectionChanged="WeaponsTypeGrid_SelectionChanged"/>
+        <Button Content="Edit" x:Name="Edit" HorizontalAlignment="Center" VerticalAlignment="Center" Height="32" Width="154" Click="Edit_Click"/>
+        <Button Content="Create" x:Name="Create" HorizontalAlignment="Center" VerticalAlignment="Center" Height="32" Width="154" Grid.Column="1" Click="Create_Click"/>
+        <Button Content="Delete" x:Name="Delete" HorizontalAlignment="Center" VerticalAlignment="Center" Height="32" Width="154" Grid.Column="2" Click="Delete_Click"/>
+        <TextBox HorizontalAlignment="Center" x:Name="WpnT" TextWrapping="Wrap" Text="Weapon Type" VerticalAlignment="Center" Width="247" Height="52" Grid.Row="1" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Center" x:Name="DmgB" TextWrapping="Wrap" Text="Damage Multiplayer" VerticalAlignment="Center" Width="246" Height="52" Grid.Row="1" Grid.Column="2"/>
+
+    </Grid>
+</Page>
